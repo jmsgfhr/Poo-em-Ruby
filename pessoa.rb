@@ -17,7 +17,7 @@ class Pessoa
     def humor dia
         humordodia = {domingo: "Feliz", segunda: "Infeliz", terça:"Agitado", quarta: "Sonolento", quinta: "Alegre", sexta: "Animado",sabado: "Cansado"}
         resp = humordodia[dia.to_sym]
-        puts resp
+        puts "Humor: #{resp}"
     end
 
     def apresentaçao

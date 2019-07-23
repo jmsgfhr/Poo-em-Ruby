@@ -2,6 +2,9 @@ require_relative 'pessoa.rb'
 
 class Teacher < Pessoa
 
+    attr_accessor :formation
+    attr_accessor :materia
+
     def initialize formation, materia
         super cpf, name, age, born, adress
         @formation = formation
@@ -9,6 +12,6 @@ class Teacher < Pessoa
     end
 
     def apresentaçao
-        puts "Formação: #{formation}\nMateria: #{materia}"
+        super
     end
 end

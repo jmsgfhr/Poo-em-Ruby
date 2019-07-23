@@ -1,33 +1,53 @@
 require_relative 'pessoa.rb'
 require_relative 'estudante.rb'
+require_relative 'professor.rb'
 
-puts 'Digite o cpf:'
-cpf=gets
-puts 'Digite o Nome:'
-name=gets
-puts 'Digite a idade:'
-age=gets
-puts 'Digite o dia do nascimento:'
-born=gets
-puts 'Digite o endereço:'
-adress=gets
+cpf='17582734823934'
+
+name='Jonathan'
+
+age='20'
+
+born='27/10/1998'
+
+adress='Rua São Marcelo'
 
 pessoa = Pessoa.new cpf,name,age,born,adress
 
 pessoa.apresentaçao do
-    puts 'Digite o dia:'
-    pessoa.humor dia=gets
+    pessoa.humor 'sexta'
     puts "Nome: #{name}\nCPF: #{cpf}\nIdade: #{age}\nNascimento: #{born}\nEndereço: #{adress}"
 end
 pessoa.atividades
 
-puts'======================'
- 
-estudante = Student.new  matricula=gets, estudando=gets
+puts'======================\n'
+
+matricula='117881882823'
+estudando=false
+estudante = Student.new  matricula, estudando
 
 estudante.apresentaçao do
-    puts 'Digite o dia:'
-    pessoa.humor dia=gets
+    pessoa.humor 'quarta'
     puts "Nome: #{name}\nCPF: #{cpf}\nIdade: #{age}\nNascimento: #{born}\nEndereço: #{adress}"
-    puts "Matricula: #{estudante.matricula}\nEsta Estudando: #{estudante.to_estudando}"
+    puts "Matricula: #{estudante.matricula}\n"
+end
+
+if estudante.to_estudando
+    puts "Esta Estudando: #{estudante.to_estudando}"
+else
+    puts 'O que esta fazendo agora?'
+    estudante.atividades 
+end
+
+puts'======================\n'
+
+formation =  ['letras','ingles','espanhol']
+materia = ['portugues','literatura']
+
+professor = Teacher.new formation, materia
+
+professor.apresentaçao do
+    pessoa.humor 'quarta'
+    puts "Nome: #{name}\nCPF: #{cpf}\nIdade: #{age}\nNascimento: #{born}\nEndereço: #{adress}"
+    puts "Formação: #{formation}\nMateria: #{materia}"
 end
