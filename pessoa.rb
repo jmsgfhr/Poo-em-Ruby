@@ -16,7 +16,8 @@ class Pessoa
 
     def humor dia
         humordodia = {domingo: "Feliz", segunda: "Infeliz", terça:"Agitado", quarta: "Sonolento", quinta: "Alegre", sexta: "Animado",sabado: "Cansado"}
-        puts humordodia[dia.to_sym]
+        resp = humordodia[dia.to_sym]
+        puts resp
     end
 
     def apresentaçao
@@ -26,10 +27,6 @@ class Pessoa
     def atividades
         activities = "Andando"
         puts activities
-    end
-
-    def estudante
-
     end
 
 end

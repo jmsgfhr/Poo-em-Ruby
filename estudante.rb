@@ -2,9 +2,13 @@ require_relative 'pessoa.rb'
 
 class Student < Pessoa
 
-    def intialize matricula, to_etudando
+    attr_accessor :matricula
+    attr_accessor :to_estudando
+
+    def initialize matricula, to_estudando
+        super cpf, name, age, born, adress
         @matricula = matricula
-        @to_etudando = to_etudando
+        @to_estudando = to_estudando
     end
 
     def to_estudando?
@@ -13,8 +17,7 @@ class Student < Pessoa
     end
 
     def apresentaçao
-        yield
-        puts "Matricula: #{matricula}\nEsta Estudando: #{to_estudando}"
+        super
     end
 
     def atividades
