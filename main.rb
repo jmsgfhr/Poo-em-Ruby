@@ -1,13 +1,25 @@
 require_relative 'pessoa.rb'
 require_relative 'estudante.rb'
 
-pessoa = Pessoa.new cpf=gets, name=gets, age=gets, born=gets, adress=gets
+puts 'Digite o cpf:'
+cpf=gets
+puts 'Digite o Nome:'
+name=gets
+puts 'Digite a idade:'
+age=gets
+puts 'Digite o dia do nascimento:'
+born=gets
+puts 'Digite o endereço:'
+adress=gets
+
+pessoa = Pessoa.new cpf,name,age,born,adress
 
 pessoa.apresentaçao do
     puts "Nome: #{name}\nCPF: #{cpf}\nIdade: #{age}\nNascimento: #{born}\nEndereço: #{adress}"
+    puts 'Digite o dia:'
+    pessoa.humor dia=gets
 end
-pessoa.humor dia=gets
 pessoa.atividades
  
-estudante = Student.new pessoa.cpf,pessoa.name,pessoa.age,pessoa.born,pessoa.adress,matricula=gets, estudando=gets
+#estudante = Student.new matricula=gets, estudando=gets
 #estudante.apresentaçao

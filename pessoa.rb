@@ -14,18 +14,22 @@ class Pessoa
         @adress = adress
     end
 
-    def apresentaçao
-       yield 
-    end
-
     def humor dia
         humordodia = {domingo: "Feliz", segunda: "Infeliz", terça:"Agitado", quarta: "Sonolento", quinta: "Alegre", sexta: "Animado",sabado: "Cansado"}
         puts humordodia[dia.to_sym]
     end
 
+    def apresentaçao
+       yield 
+    end
+
     def atividades
         activities = "Andando"
         puts activities
+    end
+
+    def estudante
+
     end
 
 end
