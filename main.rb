@@ -36,7 +36,7 @@ if estudante.to_estudando
     puts "Esta Estudando: #{estudante.to_estudando}"
 else
     puts 'O que esta fazendo agora?'
-    estudante.atividades 
+    estudante.to_estudando? 
 end
 
 puts'======================\n'
@@ -47,7 +47,7 @@ materia = ['portugues','literatura']
 professor = Teacher.new formation, materia
 
 professor.apresentaçao do
-    pessoa.humor 'quarta'
+    pessoa.humor 'segunda'
     puts "Nome: #{name}\nCPF: #{cpf}\nIdade: #{age}\nNascimento: #{born}\nEndereço: #{adress}"
     puts "Formação: #{formation}\nMateria: #{materia}"
 end

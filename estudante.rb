@@ -11,21 +11,21 @@ class Student < Pessoa
         @to_estudando = to_estudando
     end
 
-    def to_estudando?
-        if !@to_estudando
-            Pessoa.atividades
-    end
-
-    def apresentaçao
-        super
+    def locomover movimento
+        puts "Estou: #{movimento}"
     end
 
     def atividades
         locomover 'Correndo'
     end
 
-    def locomover movimento
-        puts "Estou: #{movimento}"
+    def to_estudando?
+        if !@to_estudando
+            atividades
+    end
+
+    def apresentaçao
+        super
     end
 end
 end
